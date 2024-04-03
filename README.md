@@ -1,5 +1,4 @@
-This is a project for CPS 406 - Introduction to Software Engineering.
-Iteration: 3
+Iteration 3 of a project for CPS 406 - Introduction to Software Engineering.
 
 Group members: Patricia Delos Santos, Joanna He, Katherine Luo Liu, Maleeha Mirza, Suboohi Sayeed
 
