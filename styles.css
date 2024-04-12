@@ -55,7 +55,7 @@
 
 /*Sets up style for button class when hovered*/
 .button:hover {
-    background: #e6dc72;
+    background: #edd480;
     color: #16122c;
     /*creates a delay in the hover effects taking place*/
     transition: all 0.3s ease-in-out;
