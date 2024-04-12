@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equix="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="user">
+            <i class='bx bx-user-circle'></i>
+            <p class="bold"> Bob Ross </p>
+        </div>
+        <div class="Dashboard"></div>
+
+        <!--Sidebar items-->
+        <a href="#" class="sidebar-item"><i class="bx bxs-home"></i>Dashboard</a>
+        <a href="#" class="sidebar-item payments"><i class="bx bx-dollar"></i>Payments</a>
+        <a href="#" class="sidebar-item"><i class="bx bx-book"></i>My Classes</a>
+        <a href="#" class="sidebar-item"><i class="bx bx-alarm"></i>Reminders</a>
+        <a href="#" class="sidebar-item"><i class="bx bx-cog"></i>Settings</a>
+        <a href="#" class="sidebar-item"><i class="bx bx-log-out"></i>Log Out</a>
+    </div>
+    <div class="top-bar">Payment Details</div>
+    <div class="payment-details">
+        <p>Select a payment method and click Confirm</p>
+        <img src="payment.png" alt="Payment" style="width: 600px; height: auto;">
+        <div class="form-field">
+            <label for="card-holder">CARD HOLDER'S NAME:</label>
+            <input type="text" id="card-holder" placeholder="Card Owner Name">
+        </div>
+        <div class="form-field">
+            <label for="card-number">CARD NUMBER:</label>
+            <input type="text" id="card-number" placeholder="Valid Card Number">
+        </div>
+        <div class="form-field">
+            <label for="expiration-date">EXPIRATION DATE:</label>
+            <input type="text" id="expiration-date" placeholder="MM / YY">
+        </div>
+        <div class="form-field">
+            <label for="cv-code">CV CODE:</label>
+            <input type="text" id="cv-code" placeholder="CVC">
+        </div>
+        <div class="form-field">
+            <label for="discount-code">DISCOUNT CODE:</label>
+            <input type="text" id="discount-code" placeholder="Discount Code">
+        </div>
+        <button class="confirm-button">Confirm Payment</button>
+    </div>
+    <div class="footer-bar">Footer Bar</div>
+
+</body>
+
+</html>

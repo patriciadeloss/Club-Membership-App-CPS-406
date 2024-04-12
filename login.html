@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,61 @@
     <!-- Linking to CSS styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="header">
         <h1>LOGIN</h1>
     </div>
     <div class="input__container">
-        <input class="input" type="text" id="email" name="email" size="10" placeholder="Email"/>
+        <input class="input" type="text" id="email" name="email" size="10" placeholder="Email" />
         <input class="input" type="password" id="password" name="password" size="10" placeholder="Password" />
         <a href="recoverpassword.html" class="login__links" id="forgotpass">Forgot your password?</a>
         <div class="text">
-            <label> Don't have an account? 
-                <a href="/signup.html" class="login__links">Sign Up</a>
+            <label> Don't have an account?
+                <a href="signup.html" class="login__links">Sign Up</a>
             </label>
         </div>
-        <a href="/login.html" class="button">LOGIN</a>
+        <button class="button" onclick="login()">LOGIN</button>
     </div>
+    <!-- Script for user authentication -->
+    <script>
+        // Function to handle login
+        function login() {
+            // Get email and password from input fields
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Simulate user authentication based on email
+            let role;
+            switch (email) {
+                case 'treasurer@gmail.com':
+                    role = 'treasurer';
+                    break;
+                case 'coach@gmail.com':
+                    role = 'coach';
+                    break;
+                default:
+                    role = 'member';
+                    break;
+            }
+
+            // Save role in localStorage for further use
+            localStorage.setItem('role', role);
+
+            // Redirect user to the appropriate page based on role
+            switch (role) {
+                case 'treasurer':
+                    window.location.href = '/admin_dashboard.html';
+                    break;
+                case 'coach':
+                    window.location.href = '/moderator_dashboard.html';
+                    break;
+                default:
+                    window.location.href = 'payment.html';
+                    break;
+            }
+        }
+    </script>
 </body>
+
 </html>
