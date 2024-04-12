@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Details</title>
+<link rel="stylesheet" href="sort-payment.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+</head>
+<body>
+  <div id="blueRectangle"></div> <!-- Add a div for the blue rectangle -->
+  <h1 class="finance-heading">CLUB FINANCE TRACKER</h1> <!-- Add a class to the heading -->
+  <div class="dashboard-container">
+    <a href="dashboard.html" class="section-link">
+      <span class="material-icons-outlined dashboard-icon">home</span>
+      <h2 class="dashboard">Dashboard</h2>
+    </a>
+  </div>
+  
+  <div class="income-container">
+    <a href="income.html" class="section-link">
+      <span class="material-icons-outlined income-icon">paid</span>
+      <h2 class="income">Income</h2>
+    </a>
+  </div>
+  
+  <div class="mail-container">
+    <a href="mail.html" class="section-link">
+      <span class="material-symbols-outlined mail-icon">notifications_active</span>
+      <h2 class="mail">Mail</h2>
+    </a>
+  </div>
+  
+  <div class="account-container">
+    <a href="account.html" class="section-link">
+      <span class="material-symbols-outlined account-icon">account_circle</span>
+      <h2 class="account">Account</h2>
+    </a>
+  </div>
+  
+  <table id="memberTable">
+    <thead>
+      <tr class="first-row">
+        <th class="sort-link" onclick="sortTable(0)">Name</th>
+        <th class="sort-link" onclick="sortTable(1)">Total Missed Payments</th>
+        <th>Payment Status</th>
+        <th>Discount/Penalty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>2</td>
+        <td id="statusJohnDoe"></td>
+        <td id="notesJohnDoe"></td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>5</td>
+        <td id="statusJaneSmith"></td>
+        <td id="notesJaneSmith"></td>
+      </tr>
+      <tr>
+        <td>Bob Ross</td>
+        <td>0</td>
+        <td id="statusBobRoss"></td>
+        <td id="notesBobRoss"></td>
+      </tr>
+      <tr>
+        <td>Millie Brown</td>
+        <td>0</td>
+        <td id="statusMillieBrown"></td>
+        <td id="notesMillieBrown"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div id="button-container">
+    <!-- Button for sorting -->
+    <button class="sort-btn" onclick="sortTableByStatus()">Sort by Payment Status</button>
+    <!-- Send Message button -->
+    <button class="send-message-btn" onclick="sendMessage()">Send Message</button>
+  </div>
+  
+
+ 
+  <h2 id="clearedMembersTitle">Cleared Members</h2>
+  <table id="clearedMemberTable">
+    <thead>
+      <tr class="first-row">
+        <th>Name</th>
+        <th>Total Missed Payments</th>
+        <th>Payment Status</th>
+        <th>Discount/Penalty</th>
+      </tr>
+      
+    </thead>
+    
+    <tbody>
+      <!-- Cleared members will be moved here -->
+    </tbody>
+  </table>
+
+
+  <script>
+    
+    function sortTable(columnIndex) {
+      const table = document.getElementById("memberTable");
+      const rows = Array.from(table.rows).slice(1); // Exclude header row
+      const sortType = columnIndex === 0 ? 'text' : 'number';
+
+      rows.sort((a, b) => {
+        const aValue = a.cells[columnIndex].textContent.trim();
+        const bValue = b.cells[columnIndex].textContent.trim();
+
+        if (sortType === 'text') {
+          return aValue.localeCompare(bValue);
+        } else {
+          return Number(aValue) - Number(bValue);
+        }
+      });
+
+      // Clear table body
+      table.tBodies[0].innerHTML = '';
+
+      // Re-append sorted rows
+      rows.forEach(row => table.tBodies[0].appendChild(row));
+    }
+
+
+    let isSorted = false;
+
+function sortTableByStatus() {
+  const table = document.getElementById("memberTable");
+  const clearedTable = document.getElementById("clearedMemberTable");
+  const rows = Array.from(table.rows).slice(1); // Exclude header row
+
+  // Check if the tables are already sorted
+  if (isSorted) {
+    return;
+  }
+
+  // Mark the tables as sorted
+  isSorted = true;
+
+  // Initialize arrays to store sorted rows for each table
+  const sortedRows = [];
+  const clearedRows = [];
+
+  // Sort rows
+  rows.forEach(row => {
+    const member = {
+      name: row.cells[0].textContent.trim(),
+      missedPayments: Number(row.cells[1].textContent.trim()),
+      status: row.cells[2].textContent.trim()
+    };
+    if (member.missedPayments === 0) {
+      clearedRows.push(row.cloneNode(true));
+    } else {
+      sortedRows.push(row.cloneNode(true));
+    }
+  });
+
+  // Clear table bodies
+  table.tBodies[0].innerHTML = '';
+  clearedTable.tBodies[0].innerHTML = '';
+
+  // Re-append sorted rows to the tables
+  sortedRows.forEach(row => {
+    table.tBodies[0].appendChild(row);
+  });
+  clearedRows.forEach(row => {
+    clearedTable.tBodies[0].appendChild(row);
+  });
+
+  // Fill in payment status and additional notes for cleared members
+  const members = [
+    { name: 'John Doe', missedPayments: 2 },
+    { name: 'Jane Smith', missedPayments: 5 },
+    { name: 'Bob Ross', missedPayments: 0 },
+    { name: 'Millie Brown', missedPayments: 0 }
+  ];
+
+  members.forEach(member => {
+    const statusElement = document.getElementById(`status${member.name.replace(' ', '')}`);
+    const notesElement = document.getElementById(`notes${member.name.replace(' ', '')}`);
+    if (member.missedPayments > 1) {
+      // Apply penalty fee
+      statusElement.textContent = 'Not Paid';
+      notesElement.textContent = 'Penalty Fee Applied';
+    } else {
+      // Check for discount eligibility
+      if (member.missedPayments === 0) {
+        statusElement.textContent = 'Paid';
+        notesElement.textContent = 'Eligible for Discount';
+      } else {
+        statusElement.textContent = 'Not Paid';
+        notesElement.textContent = '';
+      }
+    }
+  });
+}
+    function sendMessage() {
+      alert("Message Sent!");
+    }
+  </script>
+</body>
+</html>
