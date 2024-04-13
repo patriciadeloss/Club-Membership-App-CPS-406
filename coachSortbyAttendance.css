@@ -1,0 +1,212 @@
+/* Reset styles for default HTML elements */
+body, h1, p, button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
+  position: relative; /* Add position relative to the body */
+}
+
+#blueRectangle {
+  width: 100%; /* Full width */
+  height: 50px; /* Height of the blue rectangle */
+  background-color: #0d9ab3; /* Blue color */
+  position: absolute; /* Position it absolutely */
+  top: 0; /* Place it at the top */
+  left: 0; /* Align it to the left */
+}
+
+.dashboard {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px; /* Adjust the font size */
+  position: absolute; /* Position it absolutely */
+  top: 10px; /* Adjust vertical position */
+  left: 42%; /* Move it to the center */
+  z-index: 3; /* Ensure it's above the white rectangle */
+  color: #ffffff; /* Set the text color to white */
+}
+
+.dashboard-container {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Center items vertically */
+  z-index: 3; /* Set z-index to match the "Dashboard" text */
+}
+
+.dashboard-icon {
+  margin-right: 10px; /* Add some spacing between the icon and text */
+  position: absolute; /* Position it absolutely */
+  top: 17px; /* Adjust vertical position */
+  left: 39.8%; /* Move it to the center */
+  z-index: 3; /* Ensure it's above the white rectangle */
+  color: #ffffff;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.income {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px; /* Adjust the font size */
+  position: absolute; /* Position it absolutely */
+  top: 10px; /* Adjust vertical position */
+  left: 59%; /* Move it to the center */
+  z-index: 4; /* Ensure it's above the white rectangle */
+  color: #ffffff; /* Set the text color to white */
+}
+
+.income-container {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Center items vertically */
+  z-index: 4; /* Set z-index to match the "Income" text */
+}
+
+.income-icon {
+  margin-right: 10px; /* Add some spacing between the icon and text */
+  position: absolute; /* Position it absolutely */
+  top: 17px; /* Adjust vertical position */
+  left: 56.7%; /* Move it to the center */
+  z-index: 4; /* Ensure it's above the white rectangle */
+  color: #ffffff;
+}
+
+.mail {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px; /* Adjust the font size */
+  position: absolute; /* Position it absolutely */
+  top: 10px; /* Adjust vertical position */
+  left: 74%; /* Move it to the center */
+  z-index: 4; /* Ensure it's above the white rectangle */
+  color: #ffffff; /* Set the text color to white */
+}
+
+.mail-icon {
+  margin-right: 10px; /* Add some spacing between the icon and text */
+  position: absolute; /* Position it absolutely */
+  top: 17px; /* Adjust vertical position */
+  left: 71.7%; /* Move it to the center */
+  z-index: 4; /* Ensure it's above the white rectangle */
+  color: #ffffff;
+}
+
+.finance-heading {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 15px;
+  position: relative; /* Make it relative to its parent */
+  z-index: 1; /* Ensure it's above the blue rectangle */
+  color: #ffffff; /* Set the text color to white */
+}
+
+
+.account {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px; /* Adjust the font size */
+  position: absolute; /* Position it absolutely */
+  top: 10px; /* Adjust vertical position */
+  left: 88%; /* Move it to the center */
+  z-index: 4; /* Ensure it's above the white rectangle */
+  color: #ffffff; /* Set the text color to white */
+}
+
+.account-icon {
+  margin-right: 10px; /* Add some spacing between the icon and text */
+  position: absolute; /* Position it absolutely */
+  top: 17px; /* Adjust vertical position */
+  left: 85.7%; /* Move it to the center */
+  z-index: 4; /* Ensure it's above the white rectangle */
+  color: #ffffff;
+}
+
+.sort-btn {
+  position: fixed; /* Position the Sort button fixed within the container */
+  top: 70px; /* Adjust the position above the main table */
+  left: 20px; /* Adjust the left position */
+  background-color: #0d9ab3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+/* Main table styles */
+table#memberTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #0097B2;
+  color: #fff;
+}
+
+.even-row {
+  background-color: #F6F3F3;
+}
+
+.odd-row {
+  background-color: #D9D9D9;
+}
+
+.action-button {
+  background-color: #0097B2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+
+
+.section-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-link:hover .dashboard,
+.section-link:hover .income,
+.section-link:hover .mail,
+.section-link:hover .account {
+  color: #1a5364;
+}
+
+.section-link:hover .dashboard-icon,
+.section-link:hover .income-icon,
+.section-link:hover .mail-icon,
+.section-link:hover .account-icon {
+  color: #1a5364;
+}
+
+
+
+  
+  
