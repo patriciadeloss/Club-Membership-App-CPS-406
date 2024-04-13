@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    margin-left: 325px;
+    background: #377d92;
+}
+
+#welcome__box {
+    margin-left: 0;
+    padding: 30px 30px;
+
+
+    h1 {
+        font-size: 3.5rem;
+        color: #ffffff;
+    }
+}
+
+.status__box {
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+    border-radius: 100px 100px 0px 0px;
+    background: #fffdf5;
+    padding-bottom: 100px;
+    h1 {
+        padding-left: 30px;
+        font-size: 2.4rem;
+        text-align: left;
+        color: #167586;
+    }
+}
+
+.status__info {
+    display: inline-flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.status {
+    margin: 10px 10px;
+    padding: 10px 30px;
+    width: 280px;
+    background-image: linear-gradient(to top, #40acbe 0%, #9cebf0 100%);
+    border-radius: 30px;
+    text-decoration: none;
+    h3 {
+        
+        font-size: 1.5rem;
+        color: #17526d;
+        font-weight: bold;
+    }
+    p {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+
+}
+
+
+
+#quote {
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to top, #95d8e4 0%, #e3f4f5 100%);
+
+    h3 {
+        padding-left: 40px;
+        font-size: 2rem;
+        color: #1a5364;
+    }
+
+    p {
+        padding-left: 70px;
+        font-size: 1.3rem;
+        font-style: italic;
+    }
+
+}
+
+
+
+
+/* Style for the sidebar */
+.sidebar {
+    background-color: #0097B2;
+    color: #fff;
+    width: 250px; /*width of sidebar */
+    height: 100vh; /*height of sidebar*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding-right: 80px; /*border width of sidebar */
+    font-size: 40px;
+    box-shadow: 5px 0px 5px rgba(47, 59, 82, 0.2) ;
+    z-index: 2;
+}
+
+/* Style for sidebar items */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    width: 230px;
+    color: #fff;
+    text-decoration: none;
+    /*Four parameters
+    margin: [top] [right] [bottom] [left]
+    Two parameters
+    margin: [top and bottom] [right and left]
+    */
+    padding: 25px 50px; /*The space between each side bar selection.*/
+    font-size: 25px;
+}
+
+#current {
+    background-color: #1a5364;
+    color: #fff;
+}
+
+#logout {
+    margin-top: 15px;
+}
+
+/* Style for active sidebar item (Payments in this case) */
+.sidebar-item:hover {
+    background-color: #1a5364;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Style for icons */
+.sidebar-item i {
+    margin-right: 25px; /*the space between side icon and word*/
+}
+
+/* Style for user section */
+.user {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.user p {
+    margin-top: 5px; /* Distance between Bob Ross and profile icon */
+    padding-left: 70px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Style for user icon */
+.user i {
+    justify-content: center;
+    padding-left: 70px;
+    font-size: 100px; /* Bigger size for user icon */
+    margin-bottom: 0px;
+}

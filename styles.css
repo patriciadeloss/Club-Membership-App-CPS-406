@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -99,6 +99,17 @@
     transition: all 0.3s ease;
 }
 
+.signup__links {
+    font-weight: bold;
+    color: #0097b2;
+    text-decoration: none;
+}
+
+.signup__links:hover {
+    color: #1a5364;
+    transition: all 0.3s ease;
+}
+
 #forgotpass {
     justify-content: right;
     text-align: right;
@@ -121,11 +132,11 @@
     transition: all 0.3s ease;
 }
 
-.check {
+.check{
     width: 100%;
     margin: 0.5rem;
 
-    label {
+    label { 
         font-size: 15px;
         display: inline-block;
         vertical-align: middle;
@@ -139,11 +150,12 @@
 }
 
 #signup__btn {
-    width: 60%;
-    height: 80%;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    margin-top: 30px;
-    margin-left: 75px;
+        width: 60%;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        margin-top: 30px;
+        margin-left: 75px;
 }
+

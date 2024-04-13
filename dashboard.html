@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equix="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href = 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel ='stylesheet'>
+        <link href = 'dashboard.css' rel ='stylesheet'>
+        <title>Dashboard</title>
+    </head>
+
+
+    <body>
+        <div class="content">
+            <div id="welcome__box">
+                <h1>Hey, Bob Ross!</h1>
+                <div id="quote">
+                    <h3>Quote of the Day</h3>
+                    <p>Nothing is Impossible. The word itself says I'm possible. - Audrey Hepburn</p>
+                </div>
+            </div>
+            <div class="status__box">
+                <h1>Status</h1>
+                <ul class="status__info">
+                    <li class="status">
+                        <h3>Classes Attended</h3>
+                        <p>12</p>
+                    </li>
+                    <li class="status">
+                        <a style="text-decoration: none" href="/payment.html"><h3>Amount Due</h3></a>
+                        <p>$10.58</p>
+                    </li>
+                    <li class="status">
+                        <a style="text-decoration: none" href="/classes.html"><h3>Next Class</h3></a>
+                        <p>April 20, 2024</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="insights__box"></div>
+            
+        </div>
+        <div class="sidebar">
+            <div class = "user">
+                <i class='bx bx-user-circle'></i>
+                <p class = "bold"> Bob Ross </p>
+            </div>
+            <div class="Dashboard"></div>
+           
+            <!--Sidebar items-->
+            <a href="#" class="sidebar-item" id="current"><i class="bx bxs-home"></i>Dashboard</a>
+            <a href="/payment.html" class="sidebar-item"><i class="bx bx-dollar"></i>Payments</a>
+            <a href="/classes.html" class="sidebar-item"><i class="bx bx-book"></i>My Classes</a>
+            <a href="#" class="sidebar-item"><i class="bx bx-alarm"></i>Reminders</a>
+            <a href="#" class="sidebar-item"><i class="bx bx-cog"></i>Settings</a>
+            <a href="/index.html" class="sidebar-item" id="logout"><i class="bx bx-log-out"></i>Log Out</a>
+        </div>
+    </body>
+
+
+</html>

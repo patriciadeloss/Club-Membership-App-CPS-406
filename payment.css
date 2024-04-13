@@ -156,3 +156,9 @@ body {
     margin-top: 20px;
 }
 
+.confirm-button:hover {
+    background-color: #1a5364;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
