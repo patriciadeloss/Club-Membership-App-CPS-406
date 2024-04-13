@@ -184,28 +184,55 @@ function sortTableByStatus() {
     { name: 'Millie Brown', missedPayments: 0 }
   ];
 
-  members.forEach(member => {
-    const statusElement = document.getElementById(`status${member.name.replace(' ', '')}`);
-    const notesElement = document.getElementById(`notes${member.name.replace(' ', '')}`);
-    if (member.missedPayments > 1) {
-      // Apply penalty fee
-      statusElement.textContent = 'Not Paid';
-      notesElement.textContent = 'Penalty Fee Applied';
-    } else {
-      // Check for discount eligibility
-      if (member.missedPayments === 0) {
-        statusElement.textContent = 'Paid';
-        notesElement.textContent = 'Eligible for Discount';
-      } else {
-        statusElement.textContent = 'Not Paid';
-        notesElement.textContent = '';
-      }
-    }
-  });
 }
     function sendMessage() {
       alert("Message Sent!");
     }
+    
+  // Update payment status and notes for cleared members, including discounts
+function updateClearedMembers() {
+  const members = [
+    { name: 'John Doe', missedPayments: 2, lastPaymentMonth: 1 }, // Assuming lastPaymentMonth is January (1)
+    { name: 'Jane Smith', missedPayments: 5, lastPaymentMonth: 3 }, // Assuming lastPaymentMonth is March (3)
+    { name: 'Bob Ross', missedPayments: 0, lastPaymentMonth: 4 }, // Assuming lastPaymentMonth is April (4)
+    { name: 'Millie Brown', missedPayments: 0, lastPaymentMonth: 4 } // Assuming lastPaymentMonth is April (4)
+  ];
+
+  members.forEach(member => {
+    const statusElement = document.getElementById(`status${member.name.replace(' ', '')}`);
+    const notesElement = document.getElementById(`notes${member.name.replace(' ', '')}`);
+
+    // Calculate the number of months since last payment
+    const currentMonth = new Date().getMonth() + 1; // Adding 1 to get 1-based month index
+    const monthsSinceLastPayment = currentMonth - member.lastPaymentMonth;
+
+    // Check if the member is eligible for a discount
+    if (monthsSinceLastPayment >= 3 && member.missedPayments === 0) {
+      statusElement.textContent = 'Paid';
+      notesElement.textContent = 'Eligible for 10% Discount';
+    } else {
+      if (member.missedPayments > 1) {
+        // Apply penalty fee
+        statusElement.textContent = 'Not Paid';
+        notesElement.textContent = 'Penalty Fee Applied';
+      } else {
+        // Check for discount eligibility
+        if (member.missedPayments === 0) {
+          statusElement.textContent = 'Paid';
+          notesElement.textContent = 'Eligible for Discount';
+        } else {
+          statusElement.textContent = 'Not Paid';
+          notesElement.textContent = '';
+        }
+      }
+    }
+  });
+}
+
+// Call the function to update cleared members when the page loads
+window.onload = function() {
+  updateClearedMembers();
+}
   </script>
 </body>
 </html>
