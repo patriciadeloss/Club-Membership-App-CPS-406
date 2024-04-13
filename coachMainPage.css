@@ -1,4 +1,4 @@
-/* Reset styles for default HTML elements */
+q/* Reset styles for default HTML elements */
 body, h1, p, button {
   margin: 0;
   padding: 0;
@@ -134,7 +134,8 @@ body {
   color: #ffffff;
 }
 
-.sort-btn {
+
+#sort-btn {
   position: fixed; /* Position the Sort button fixed within the container */
   top: 70px; /* Adjust the position above the main table */
   left: 20px; /* Adjust the left position */
@@ -158,6 +159,22 @@ body {
   cursor: pointer;
 }
 
+/*Sets up style for button class when hovered*/
+.filter-btn:hover {
+  background: #696969;
+  color: #ffffff;
+  /*creates a delay in the hover effects taking place*/
+  transition: all 0.3s ease;
+}
+
+/*Sets up style for button class when hovered*/
+.action-button:hover {
+  background: #1a5364;
+  color: #ffffff;
+  /*creates a delay in the hover effects taking place*/
+  transition: all 0.3s ease-in-out;
+}
+
 /* Add Members button */
 .add-members-btn {
   margin-top: 100px;
@@ -172,13 +189,21 @@ body {
   cursor: pointer;
 }
 
+/*Sets up style for button class when hovered*/
+.add-members-btn:hover {
+  background: #696969;
+  color: #ffffff;
+  /*creates a delay in the hover effects taking place*/
+  transition: all 0.3s ease;
+}
+
 /* Main table styles */
 table#memberTable {
   width: 100%;
   border-collapse: collapse;
   border-radius: 5px;
   overflow: hidden;
-  margin-top: 70px;
+  margin-top: 10px;
 }
 
 th, td {
@@ -209,6 +234,14 @@ th {
   cursor: pointer;
 }
 
+/*Sets up style for button class when hovered*/
+.action-button:hover {
+  background: #1a5364;
+  color: #ffffff;
+  /*creates a delay in the hover effects taking place*/
+  transition: all 0.3s ease-in-out;
+}
+
 /* Send Message button */
 .send-message-btn {
   margin-bottom: 250px;
@@ -223,6 +256,14 @@ th {
   cursor: pointer;
 }
 
+/*Sets up style for button class when hovered*/
+.send-message-btn:hover {
+  background: #696969;
+  color: #ffffff;
+  /*creates a delay in the hover effects taking place*/
+  transition: all 0.3s ease;
+}
+
 .remove-checkbox {
   margin: 0;
   padding: 0;
@@ -234,6 +275,22 @@ th {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+}
+
+.sort-btn-container {
+  display: inline-flex;
+}
+
+.sort-btn {
+  list-style-type: none;
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.sort-links {
+  padding: 15px;
+  font-size: 1.2rem;
+  color: #1a5364;
 }
 
 .section-link:hover .dashboard,

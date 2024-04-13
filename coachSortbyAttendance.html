@@ -15,71 +15,105 @@
   <div id="blueRectangle"></div> <!-- Add a div for the blue rectangle -->
   <h1 class="finance-heading">CLUB FINANCE TRACKER</h1> <!-- Add a class to the heading -->
   <div class="dashboard-container">
-    <a href="dashboard.html" class="section-link">
+    <a href="#" class="section-link">
       <span class="material-icons-outlined dashboard-icon">home</span>
       <h2 class="dashboard">Dashboard</h2>
     </a>
   </div>
   
   <div class="income-container">
-    <a href="income.html" class="section-link">
+    <a href="#" class="section-link">
       <span class="material-icons-outlined income-icon">paid</span>
       <h2 class="income">Income</h2>
     </a>
   </div>
   
   <div class="mail-container">
-    <a href="mail.html" class="section-link">
+    <a href="#" class="section-link">
       <span class="material-symbols-outlined mail-icon">notifications_active</span>
       <h2 class="mail">Mail</h2>
     </a>
   </div>
   
   <div class="account-container">
-    <a href="account.html" class="section-link">
+    <a href="#" class="section-link">
       <span class="material-symbols-outlined account-icon">account_circle</span>
       <h2 class="account">Account</h2>
     </a>
   </div>
 
+  <div class="sort-btn-container">
+    <ul class="sort-btn">
+      <li class="sort-links">Sort By:</li>
+      <li class="sort-links">
+        <a href="/coachMainPage.html">Name</a>
+      </li>
+      <li class="sort-links">
+        <a href="/coachSortbyAttendance.html">Attendance</a>
+      </li>
+      <li class="sort-links">
+        <a href="/coachSortbyAddress.html">Address</a>
+      </li>
+    </ul>
+  </div>
+
+  <button class="add-members-btn">+ Add Members</button>
 
   <table id="memberTable">
     <thead>
-      <tr class="first-row">
+      <tr class="first-row" class="remove-checkbox">
+        <th>Remove</th>
         <th>Name</th>
         <th>Phone Number</th>
         <th>Address</th>
-        <th>Class Attendance</th>
+        <th>Attended</th>
+        <th>Signed Up</th>
       </tr>
     </thead>
     <tbody>
       <tr class="odd-row">
+        <td><input type="checkbox" class="remove-checkbox"></td>
         <td>Bob Ross</td>
         <td>647-123-4567</td>
         <td>12 Boardwalk St.</td>
         <td>5</td>
+        <td><a href="https://www.google.com">Class details</a></td>
       </tr>
       <tr class="even-row">
+        <td><input type="checkbox" class="remove-checkbox"></td>
         <td>Jane Smith</td>
         <td>123-456-7890</td>
         <td>123 Candy St.</td>
         <td>4</td>
+        <td><a href="https://www.google.com">Class details</a></td>
       </tr>
       <tr class="odd-row">
+        <td><input type="checkbox" class="remove-checkbox"></td>
         <td>John Doe</td>
         <td>456-123-7890</td>
         <td>123 Buffalo Crt.</td>
-        <td>3</td>
+        <td>2</td>
+        <td><a href="https://www.google.com">Class details</a></td>
       </tr>
       <tr class="even-row">
+        <td><input type="checkbox" class="remove-checkbox"></td>
         <td>Millie Brown</td>
         <td>345-165-2892</td>
         <td>73 Waterfall rd.</td>
-        <td>2</td>
+        <td>0</td>
+        <td><a href="https://www.google.com" >Class details</a></td>
+      </tr>
+      <tr class="first-row">
+        <td colspan="6">
+          <button id="saveProgressBtn" class="action-button">Save Progress</button>
+        </td>
       </tr>
     </tbody>
   </table>
 
+  <a href="mailto:katherineluoliu@gmail.com?subject=Updated%20Class%20Schedules&body=Dear%20Miss%20Katherine%20Luo%20Liu,%0A%0AI%20hope%20you're%20having%20a%20lovely%20day!%20We%20have%20updated%20our%20new%20dance%20class%20schedules.%20Please%20feel%20free%20to%20visit%20the%20website%20and%20sign%20up%20for%20those%20classes%20before%20they're%20full!%20Hope%20to%20see%20you%20soon!%0A%0ARegards,%0AThe%20Recreational%20Club">
+    <button class="send-message-btn">Send Message</button>
+  </a>
   
   
  </body>
