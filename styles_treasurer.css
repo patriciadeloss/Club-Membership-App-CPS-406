@@ -1,0 +1,337 @@
+/* Reset styles for default HTML elements */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+}  
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    position: relative; /* Add position relative to the body */
+}
+  
+#blueRectangle {
+    width: 100%; /* Full width */
+    height: 50px; /* Height of the blue rectangle */
+    background-color: #0d9ab3; /* Blue color */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Place it at the top */
+    left: 0; /* Align it to the left */
+}
+
+.dashboard {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px; /* Adjust the font size */
+    position: absolute; /* Position it absolutely */
+    top: 10px; /* Adjust vertical position */
+    left: 42%; /* Move it to the center */
+    z-index: 3; /* Ensure it's above the white rectangle */
+    color: #ffffff; /* Set the text color to white */
+}
+  
+.dashboard-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically */
+    z-index: 3; /* Set z-index to match the "Dashboard" text */
+}
+  
+.dashboard-icon {
+    margin-right: 10px; /* Add some spacing between the icon and text */
+    position: absolute; /* Position it absolutely */
+    top: 17px; /* Adjust vertical position */
+    left: 39.8%; /* Move it to the center */
+    z-index: 3; /* Ensure it's above the white rectangle */
+    color: #ffffff;
+}
+  
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+  
+.income {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px; /* Adjust the font size */
+    position: absolute; /* Position it absolutely */
+    top: 10px; /* Adjust vertical position */
+    left: 59%; /* Move it to the center */
+    z-index: 4; /* Ensure it's above the white rectangle */
+    color: #ffffff; /* Set the text color to white */
+}
+  
+.income-container {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Center items vertically */
+    z-index: 4; /* Set z-index to match the "Income" text */
+}
+  
+.income-icon {
+    margin-right: 10px; /* Add some spacing between the icon and text */
+    position: absolute; /* Position it absolutely */
+    top: 17px; /* Adjust vertical position */
+    left: 56.7%; /* Move it to the center */
+    z-index: 4; /* Ensure it's above the white rectangle */
+    color: #ffffff;
+}
+  
+.pay {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px; /* Adjust the font size */
+    position: absolute; /* Position it absolutely */
+    top: 10px; /* Adjust vertical position */
+    left: 74%; /* Move it to the center */
+    z-index: 4; /* Ensure it's above the white rectangle */
+    color: #ffffff; /* Set the text color to white */
+}
+  
+.pay-icon {
+    margin-right: 10px; /* Add some spacing between the icon and text */
+    position: absolute; /* Position it absolutely */
+    top: 17px; /* Adjust vertical position */
+    left: 71.7%; /* Move it to the center */
+    z-index: 4; /* Ensure it's above the white rectangle */
+    color: #ffffff;
+}
+  
+.finance-heading {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 15px;
+    position: relative; /* Make it relative to its parent */
+    z-index: 1; /* Ensure it's above the blue rectangle */
+    color: #ffffff; /* Set the text color to white */
+}
+  
+  
+.account {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px; /* Adjust the font size */
+    position: absolute; /* Position it absolutely */
+    top: 10px; /* Adjust vertical position */
+    left: 88%; /* Move it to the center */
+    z-index: 4; /* Ensure it's above the white rectangle */
+    color: #ffffff; /* Set the text color to white */
+}
+  
+.account-icon {
+    margin-right: 10px; /* Add some spacing between the icon and text */
+    position: absolute; /* Position it absolutely */
+    top: 17px; /* Adjust vertical position */
+    left: 85.7%; /* Move it to the center */
+    z-index: 4; /* Ensure it's above the white rectangle */
+    color: #ffffff;
+}
+  
+.section-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+  
+.section-link:hover .dashboard,
+.section-link:hover .income,
+.section-link:hover .pay,
+.section-link:hover .account {
+    color: #1a5364;
+}
+  
+.section-link:hover .dashboard-icon,
+.section-link:hover .income-icon,
+.section-link:hover .pay-icon,
+.section-link:hover .account-icon {
+    color: #1a5364;
+}  
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Income statement styles */
+.income-statement,
+.monthly-profit,
+.unpaid-debt {
+    background-color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    border-bottom: 2px solid #0d9ab3;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #0d9ab3;
+}
+
+.section-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.profit-list,
+.unpaid-rent ul,
+.unpaid-expenses ul {
+    list-style-type: none;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.profit-list li,
+.unpaid-rent ul li,
+.unpaid-expenses ul li {
+    padding: 2px 0;
+}
+
+/* Payment styles */
+.form-group {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #0d9ab3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/*Sets up style for button class when hovered*/
+button:hover {
+    background-color: #02668b;
+    /*creates a delay in the hover effects taking place*/
+    transition: all 0.3s ease-in-out;
+}
+
+/* Clear floats */
+form-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Account styles */
+.account-settings {
+    max-width: 1000px;
+    margin: auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-picture-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f3f3f3; /* Placeholder color if no image */
+}
+
+.btn-change-picture {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #0d9ab3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-change-picture:hover {
+    background-color: #02668b;
+}
+
+.picture-info {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.account-form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.account-form input,
+.account-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.btn-change-password {
+    width: 100%;
+    padding: 10px;
+    background-color: #0d9ab3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-change-password:hover {
+    background-color: #02668b;
+}
+
+.btn-logout {
+    width: 100%;
+    padding: 10px;
+    background-color: #0d9ab3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
