@@ -16,6 +16,7 @@ body {
     padding-right: 80px; /*border width of sidebar */
     font-size: 40px;
     z-index: 2;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2) ;
 }
 
 /* Style for sidebar items */
@@ -97,6 +98,7 @@ body {
     position: absolute;
     left: 300px; /* Adjust based on sidebar width */
     width: calc(100% - 300px); /* Adjust based on sidebar width */
+    z-index: 1;
 }
 
 /* Payment details section */
