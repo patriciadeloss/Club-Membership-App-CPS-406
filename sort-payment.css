@@ -20,6 +20,19 @@ body {
   left: 0; /* Align it to the left */
 }
 
+.penalty-button {
+  position: absolute;
+  top: 70px; /* Adjust as needed to position below the blue rectangle */
+  left: 1080px; /* Adjust as needed */
+  background-color: #0097B2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  z-index: 3;
+}
+
 .dashboard {
   font-weight: bold;
   text-align: center;
