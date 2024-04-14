@@ -21,9 +21,10 @@ Completed:
 - Members can complete payments.
 
 
-## Technologies Used  
+## Languages Used  
 - HTML
 - CSS
+- Javascript
   
 ## Setup Instructions
 1. Clone the github repo
