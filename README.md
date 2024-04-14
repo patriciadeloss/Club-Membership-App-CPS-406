@@ -24,7 +24,6 @@ Completed:
 ## Technologies Used  
 - HTML
 - CSS
-- JavaScript
   
 ## Setup Instructions
 1. Clone the github repo
